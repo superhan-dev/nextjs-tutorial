@@ -9,8 +9,10 @@ import { useMutation } from "convex/react";
 import { useOrganization } from "@clerk/nextjs";
 import { useApiMutation } from "@/hooks/use-api-mutation";
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 const EmptyBoard = () => {
+  const router = useRouter();
   const { organization } = useOrganization();
   // TODO: DB 전환시 react query 로 변환
   const { mutate, pending } = useApiMutation(api.board.create);
@@ -21,7 +23,7 @@ const EmptyBoard = () => {
     mutate({ orgId: organization.id, title: "Untitled" })
       .then((id) => {
         toast.success("Board created");
-        // TODO: Redirect to board/{id}
+        router.push(`/board/${id}`);
       })
       .catch(() => toast.error("Failed to create board"));
   };
