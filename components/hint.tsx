@@ -2,7 +2,7 @@ import React from "react";
 import { Tooltip, TooltipProvider, TooltipTrigger } from "./ui/tooltip";
 import { TooltipContent } from "@radix-ui/react-tooltip";
 export interface HintProps {
-  lable: string;
+  label: string;
   children: React.ReactNode;
   side?: "top" | "bottom" | "left" | "right";
   align?: "start" | "center" | "end";
@@ -11,7 +11,7 @@ export interface HintProps {
 }
 
 const Hint = ({
-  lable,
+  label,
   children,
   side,
   align,
@@ -29,7 +29,7 @@ const Hint = ({
           sideOffset={sideOffset}
           alignOffset={alignOffset}
         >
-          <p className="font-semibold capitalize">{lable}</p>
+          <p className="font-semibold capitalize">{label}</p>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
