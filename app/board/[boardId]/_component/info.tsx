@@ -34,7 +34,7 @@ const Info = ({ boardId }: InfoProps) => {
       <Hint label="Go to baords" side="bottom" sideOffset={10}>
         <Button asChild variant={"board"} className="px-2">
           <Link href={"/"}>
-            <Image src="/logo.svg" alt="Logo" height={50} width={50} />
+            <Image src="/logo.svg" alt="Logo" height={40} width={40} />
             <span
               className={cn(
                 "font-semibold text-xl ml-2 text-black",
