@@ -145,12 +145,15 @@ const Canvas = ({ boardId }: CanvasProps) => {
 
   const [camera, setCamera] = useState<Camera>({ x: 0, y: 0 });
 
-  const onWheel = useCallback((e: React.WheelEvent) => {
-    setCamera((camera) => ({
-      x: camera.x - e.deltaX,
-      y: camera.y - e.deltaY,
-    }));
-  }, []);
+  const onWheel = useCallback(
+    (e: React.WheelEvent) => {
+      setCamera((camera) => ({
+        x: camera.x - e.deltaX,
+        y: camera.y - e.deltaY,
+      }));
+    },
+    [setCamera]
+  );
 
   const onPointerMove = useMutation(
     ({ setMyPresence }, e: React.PointerEvent) => {
@@ -274,7 +277,7 @@ const Canvas = ({ boardId }: CanvasProps) => {
         onPointerUp={onPointerUp}
         onPointerDown={onPointerDown}
       >
-        <g style={{ transform: `translate(${camera.x}px, ${camera.y})` }}>
+        <g style={{ transform: `translate(${camera.x}px, ${camera.y}px)` }}>
           {layerIds.map((layerId) => (
             <>
               <LayerPreview
