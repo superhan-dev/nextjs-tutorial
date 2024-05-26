@@ -5,7 +5,7 @@ import {
   createClient,
 } from "@liveblocks/client";
 import { createRoomContext, createLiveblocksContext } from "@liveblocks/react";
-import { Layer } from "./type/canvas";
+import { Color, Layer } from "./type/canvas";
 
 const client = createClient({
   // publicApiKey:
@@ -60,6 +60,8 @@ const client = createClient({
 type Presence = {
   cursor: { x: number; y: number } | null;
   selection: string[];
+  pencilDraft: [x: number, y: number, pressure: number][] | null;
+  penColor: Color | null;
   // ...
 };
 
