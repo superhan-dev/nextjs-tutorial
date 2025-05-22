@@ -12,7 +12,7 @@ interface BlogListProps {
 }
 
 const BlogList = (props: BlogListProps) => {
-  const posts = use(props.postsPromise);
+  const posts = use(props.postsPromise) || [];
 
   return (
     <ul>
