@@ -1,0 +1,37 @@
+.componentErrorContainer {
+  width: 100%;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.componentErrorContent {
+  text-align: center;
+  padding: 20px;
+}
+
+.componentErrorContent h3 {
+  color: #ff6b6b;
+  margin: 0 0 15px;
+}
+
+.componentErrorContent p {
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.retryButton {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.retryButton:hover {
+  background-color: #555;
+}

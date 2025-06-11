@@ -1,0 +1,29 @@
+.header {
+  background-color: #333;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerBar {
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 12px;
+  width: 40%;
+  border-radius: 6px;
+}
+
+.userIcon {
+  background-color: #555;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

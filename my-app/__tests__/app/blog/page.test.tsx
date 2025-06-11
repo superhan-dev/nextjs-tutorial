@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen, act } from "@testing-library/react";
-import Page from "../../../src/app/blog/page";
+import Page from "../../../app/blog/page";
 
 beforeEach(() => {
   global.fetch = jest.fn(() =>

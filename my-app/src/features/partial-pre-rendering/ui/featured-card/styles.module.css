@@ -1,0 +1,45 @@
+.featuredCard {
+  background-color: #333;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.imageContainer {
+  height: 280px;
+  background-color: #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholderImage {
+  background-color: #555;
+  border-radius: 8px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardContent {
+  padding: 20px;
+}
+
+.title {
+  color: white;
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+}
+
+.description {
+  color: #ccc;
+  margin: 0;
+  line-height: 1.5;
+}
